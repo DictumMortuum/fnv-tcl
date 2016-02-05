@@ -1,4 +1,4 @@
-package require fnvtcl
+package provide fnv 1.0
 
 namespace eval fnv {
 
@@ -109,5 +109,3 @@ proc ::fnv::fnv_mask {{input ""} {bits 64} {func "fnv1a"}} {
 		return   [format 0x%x [expr {$hash &  $mask}]]
 	}
 }
-
-puts [::fnv::fnv1a "blablablabla"]
